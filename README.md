@@ -14,4 +14,4 @@ To run the program, simply call `./run` in the root directory. This will launch 
 
 <b>This repository contains executable files (the Vortex interpreter and modules). They are provided pre-compiled as a convenience, and there's no need to compile anything yourself. Simply clone the repository and start writing.</b>
 
-To view and compile Vortex source code, including the source code for the provided modules, (visit the official repository)[https://github.com/dibsonthis/vortex].
+To view and compile Vortex source code, including the source code for the provided modules, [visit the official repository](https://github.com/dibsonthis/vortex).
