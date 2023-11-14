@@ -1,6 +1,6 @@
 <h1>Vortex Scaffold</h1>
 
-A self contained repository for Vortex programs. It includes everything you will need to run Vortex programs in one simple environment:
+A self contained repository for Vortex programs. It includes everything you will need to write and run Vortex programs in one simple environment:
 
 - The Vortex interpreter
 - Vortex standard library modules
