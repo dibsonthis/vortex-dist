@@ -1,3 +1,5 @@
+**Vortex Scaffold**
+
 A self contained repository for Vortex programs. It includes everything you will need to run Vortex programs in one simple environment:
 
 - The Vortex interpreter
