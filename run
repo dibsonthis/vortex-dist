@@ -1,7 +1,3 @@
-source config.ini
-
-if [ -z "$modules" ]; then
-    ./vortex $entry
-else
-    ./vortex $entry -m $PWD/$modules
-fi
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e2b2160e7041aca8683517a4fb4ba9c5f6dd2c0ca83dbf01b0fdfa58933bfd0
+size 110
