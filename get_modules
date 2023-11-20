@@ -1,41 +1,48 @@
 #!/bin/bash
 
-if [ -d "modules" ]; then
-    rm -rf modules
-else
-    echo
-fi
+get_modules() {
 
-mkdir modules
+    if [ -d "modules" ]; then
+        rm -rf modules
+    else
+        echo
+    fi
 
-if [ -e "modules.txt" ]; then
+    mkdir modules
 
-else
-    echo 'functional
-functools
-io
-json
-logging
-math
-os
-requests
-sdl
-string
-sys
-time' > modules.txt
-fi
+    if [ -e "modules.txt" ]; then
 
-cd modules
-modules_array=()
+    else
+        echo 'functional
+    functools
+    io
+    json
+    logging
+    math
+    os
+    requests
+    sdl
+    string
+    sys
+    time' > modules.txt
+    fi
 
-while IFS= read -r line || [ -n "$line" ]; do
-    modules_array+=("$line")
-done < "../modules.txt"
+    cd modules
+    modules_array=()
 
-for module in "${modules_array[@]}"
-do
-    curl -LO "https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/$module.zip"
-    unzip "$module.zip"
-    rm "$module.zip"
-done
-cd ..
+    while IFS= read -r line || [ -n "$line" ]; do
+        trimmed=$(echo -e "$line" | tr -d '[:space:]')
+        modules_array+=("$trimmed")
+    done < "../modules.txt"
+
+    for module in "${modules_array[@]}"
+    do
+        curl -LO "https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/$module.zip"
+        unzip "$module.zip"
+        rm "$module.zip"
+    done
+    cd ..
+
+}
+
+get_modules
