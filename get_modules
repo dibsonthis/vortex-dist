@@ -1,6 +1,11 @@
 #!/bin/bash
 
-rm -r modules
+if [ -d "modules" ]; then
+    rm -rf modules
+else
+
+fi
+
 mkdir modules
 
 if [ -e "modules.txt" ]; then
