@@ -1,0 +1,36 @@
+#!/bin/bash
+
+rm -r modules
+mkdir modules
+
+if [ -e "modules.txt" ]; then
+
+else
+    echo 'functional
+functools
+io
+json
+logging
+math
+os
+requests
+sdl
+string
+sys
+time' > modules.txt
+fi
+
+cd modules
+modules_array=()
+
+while IFS= read -r line || [ -n "$line" ]; do
+    modules_array+=("$line")
+done < "../modules.txt"
+
+for module in "${modules_array[@]}"
+do
+    curl -LO "https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/$module.zip"
+    unzip "$module.zip"
+    rm "$module.zip"
+done
+cd ..

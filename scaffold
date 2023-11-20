@@ -39,20 +39,33 @@ curl -LO https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/vortex
 chmod 755 vortex
 
 if [ -e "modules.txt" ]; then
-    cd modules
-    modules_array=()
 
-    while IFS= read -r line || [ -n "$line" ]; do
-        modules_array+=("$line")
-    done < "../modules.txt"
-
-    for module in "${modules_array[@]}"
-    do
-        curl -LO "https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/$module.zip"
-        unzip "$module.zip"
-        rm "$module.zip"
-    done
-    cd ..
 else
-    echo "No module file found"
+    echo 'functional
+functools
+io
+json
+logging
+math
+os
+requests
+sdl
+string
+sys
+time' > modules.txt
 fi
+
+cd modules
+modules_array=()
+
+while IFS= read -r line || [ -n "$line" ]; do
+    modules_array+=("$line")
+done < "../modules.txt"
+
+for module in "${modules_array[@]}"
+do
+    curl -LO "https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/$module.zip"
+    unzip "$module.zip"
+    rm "$module.zip"
+done
+cd ..
