@@ -3,7 +3,7 @@
 if [ -d "modules" ]; then
     rm -rf modules
 else
-
+    echo
 fi
 
 mkdir modules

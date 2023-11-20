@@ -39,7 +39,7 @@ curl -LO https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/vortex
 chmod 755 vortex
 
 if [ -e "modules.txt" ]; then
-
+    echo
 else
     echo 'functional
 functools
