@@ -14,17 +14,17 @@ get_modules() {
 
     else
         echo 'functional
-    functools
-    io
-    json
-    logging
-    math
-    os
-    requests
-    sdl
-    string
-    sys
-    time' > modules.txt
+functools
+io
+json
+logging
+math
+os
+requests
+sdl
+string
+sys
+time' > modules.txt
     fi
 
     cd modules

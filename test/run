@@ -1,0 +1,7 @@
+source config.ini
+
+    if [ -z "$modules" ]; then
+        ./vortex $entry
+    else
+        ./vortex $entry -m $PWD/$modules
+    fi
