@@ -8,6 +8,13 @@ get_modules() {
         echo
     fi
 
+    if [ -e "vortex" ]; then
+        echo
+    else
+        curl -LO https://github.com/dibsonthis/vortex-dist/releases/download/v1.1/vortex
+        chmod 755 vortex
+    fi
+    
     mkdir modules
 
     if [ -e "modules.txt" ]; then

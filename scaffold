@@ -23,6 +23,10 @@ scaffold() {
 
     println(datetime_obj)' > src/main.vtx
 
+        echo '# Ignore interpreter and modules dir
+vortex
+modules/' > .gitignore
+
     echo '# Vortex Configuration
 
     entry="src/main.vtx" # Sets the entry point of the program from root
