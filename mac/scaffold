@@ -25,7 +25,8 @@ println(datetime_obj)' > src/main.vtx
 
         echo '# Ignore interpreter and modules dir
 vortex
-modules/' > .gitignore
+modules/
+.DS_Store' > .gitignore
 
     echo '# Vortex Configuration
 
