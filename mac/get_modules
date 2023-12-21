@@ -22,6 +22,7 @@ get_modules() {
     else
         echo 'functional
 functools
+future
 io
 json
 logging
