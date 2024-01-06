@@ -14,21 +14,26 @@ To run the program, simply call `./run` in the root directory. This will launch 
 
 Simply run the below command in a new directory to scaffold a Vortex environment:
 
-```
+
 Mac:
+```
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/scaffold | bash
+```
 
 Windows:
+```
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/scaffold | bash
 ```
 
 Or if you've cloned a scaffolded Vortex repo that does not include the necessary binaries, you can run:
 
-```
 Mac:
+```
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/update | bash
+```
 
 Windows:
+```
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/update | bash
 ```
 
