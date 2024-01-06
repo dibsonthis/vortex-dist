@@ -12,18 +12,24 @@ If you wish to make changes to the scaffolded directory, make sure to update the
 
 To run the program, simply call `./run` in the root directory. This will launch the intepreter with the provided entry point.
 
-<b><i>Note on compatibility: This repository only contains a Mac scaffold. A Windows scaffold will be added in the near future.</i></b>
-
 Simply run the below command in a new directory to scaffold a Vortex environment:
 
 ```
+Mac:
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/scaffold | bash
+
+Windows:
+curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/scaffold | bash
 ```
 
 Or if you've cloned a scaffolded Vortex repo that does not include the necessary binaries, you can run:
 
 ```
-curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/get_modules | bash
+Mac:
+curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/update | bash
+
+Windows:
+curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/update | bash
 ```
 
 To view and compile Vortex source code, including the source code for the provided modules, [visit the official repository](https://github.com/dibsonthis/vortex).

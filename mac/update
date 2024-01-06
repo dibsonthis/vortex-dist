@@ -2,18 +2,25 @@
 
 get_modules() {
 
+    curl -LO https://github.com/dibsonthis/Vortex/releases/latest/download/mac.zip
+    unzip mac.zip
+
     if [ -d "modules" ]; then
         rm -rf modules
+        echo Deleting modules...
     else
         echo
     fi
 
     if [ -e "vortex" ]; then
-        echo
+        echo Deleting interpreter...
+        rm vortex
     else
-        curl -LO https://github.com/dibsonthis/Vortex/releases/latest/download/vortex
-        chmod 755 vortex
+        echo
     fi
+
+    mv mac/vortex vortex
+    chmod 755 vortex
 
     mkdir modules
 
@@ -45,11 +52,12 @@ time' > modules.txt
 
     for module in "${modules_array[@]}"
     do
-        curl -LO "https://github.com/dibsonthis/Vortex/releases/latest/download/$module.zip"
-        unzip "$module.zip"
-        rm "$module.zip"
+        mv ../mac/modules/$module $module
     done
     cd ..
+
+    rm -rf mac
+    rm -rf mac.zip
 
 }
 
