@@ -55,6 +55,7 @@
 
     rmdir /s /q windows
     del windows.zip
+    del "update.bat"
 
 goto :eof
 

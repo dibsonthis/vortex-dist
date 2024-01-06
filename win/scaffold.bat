@@ -88,6 +88,7 @@
 
     rmdir /s /q "windows"
     del /q "windows.zip"
+    del "scaffold.bat"
 goto :eof
 
 :: Call the scaffold function
