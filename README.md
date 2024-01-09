@@ -20,6 +20,11 @@ Mac:
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/scaffold | bash
 ```
 
+Linux:
+```
+curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/lin/scaffold | bash
+```
+
 Windows:
 ```
 curl -LO -k https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/scaffold.bat
@@ -31,6 +36,11 @@ Or if you've cloned a scaffolded Vortex repo that does not include the necessary
 Mac:
 ```
 curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/mac/update | bash
+```
+
+Linux:
+```
+curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/lin/update | bash
 ```
 
 Windows:

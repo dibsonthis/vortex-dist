@@ -1,0 +1,89 @@
+#!/bin/bash
+
+scaffold() {
+
+    mkdir modules
+    mkdir src
+    echo 'import time
+import [] : string
+import [] : functional
+
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+const datetime = time.datetime()
+const datetime_split = datetime.split().filter((e) => e != "")
+const datetime_obj = {
+    dayname: datetime_split[0],
+    monthname: datetime_split[1],
+    day: datetime_split[2],
+    month: months.indexOf(datetime_split[1]) + 1,
+    year: datetime_split[4],
+    time: datetime_split[3],
+}
+
+println(datetime_obj)' > src/main.vtx
+
+        echo '# Ignore interpreter and modules dir
+vortex
+modules/
+.DS_Store' > .gitignore
+
+    echo '# Vortex Configuration
+
+    entry="src/main.vtx" # Sets the entry point of the program from root
+    modules="modules" # Sets the modules folder - leave as an empty string to use system installed modules' > config.ini
+
+    echo 'source config.ini
+
+    if [ -z "$modules" ]; then
+        ./vortex $entry
+    else
+        ./vortex $entry -m $PWD/$modules
+    fi' > run
+    chmod 755 run
+
+    # Download and unzip interpreter and modules
+
+    curl -LO https://github.com/dibsonthis/Vortex/releases/latest/download/linux.zip
+    unzip linux.zip
+
+    mv linux/vortex vortex
+    chmod 755 vortex
+
+    if [ -e "modules.txt" ]; then
+        echo
+    else
+        echo 'functional
+functools
+future
+io
+json
+logging
+math
+os
+requests
+sdl
+string
+sys
+time' > modules.txt
+    fi
+
+    cd modules
+    modules_array=()
+
+    while IFS= read -r line || [ -n "$line" ]; do
+        trimmed=$(echo -e "$line" | tr -d '[:space:]')
+        modules_array+=("$trimmed")
+    done < "../modules.txt"
+
+    for module in "${modules_array[@]}"
+    do
+        mv ../linux/modules/$module $module
+    done
+    cd ..
+
+    rm -rf linux
+    rm -rf linux.zip
+}
+
+scaffold
