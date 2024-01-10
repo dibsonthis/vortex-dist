@@ -76,6 +76,7 @@
             echo.sys
             echo.time
             echo.random
+            echo.sqlite
         ) > "modules.txt"
     )
 

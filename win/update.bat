@@ -41,6 +41,7 @@
         echo sys>> modules.txt
         echo time>> modules.txt
         echo random>> modules.txt
+        echo sqlite>> modules.txt
     )
 
     mkdir modules

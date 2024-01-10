@@ -66,7 +66,8 @@ sdl
 string
 sys
 time
-random' > modules.txt
+random
+sqlite' > modules.txt
     fi
 
     cd modules
