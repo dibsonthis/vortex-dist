@@ -40,6 +40,7 @@
         echo string>> modules.txt
         echo sys>> modules.txt
         echo time>> modules.txt
+        echo random>> modules.txt
     )
 
     mkdir modules

@@ -65,7 +65,8 @@ requests
 sdl
 string
 sys
-time' > modules.txt
+time
+random' > modules.txt
     fi
 
     cd modules

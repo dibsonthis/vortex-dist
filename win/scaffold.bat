@@ -75,6 +75,7 @@
             echo.string
             echo.sys
             echo.time
+            echo.random
         ) > "modules.txt"
     )
 
