@@ -77,6 +77,7 @@
             echo.time
             echo.random
             echo.sqlite
+            echo.websockets
         ) > "modules.txt"
     )
 

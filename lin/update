@@ -41,7 +41,8 @@ string
 sys
 time
 random
-sqlite' > modules.txt
+sqlite
+websockets' > modules.txt
     fi
 
     cd modules

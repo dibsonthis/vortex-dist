@@ -42,6 +42,7 @@
         echo time>> modules.txt
         echo random>> modules.txt
         echo sqlite>> modules.txt
+        echo websockets>> modules.txt
     )
 
     mkdir modules
