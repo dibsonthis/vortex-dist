@@ -28,7 +28,7 @@ curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/lin/scaffold 
 Windows:
 ```
 curl -LO -k https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/scaffold.bat
-scaffold.bat
+./scaffold.bat
 ```
 
 Or if you've cloned a scaffolded Vortex repo that does not include the necessary binaries, you can run:
@@ -46,7 +46,7 @@ curl https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/lin/update | 
 Windows:
 ```
 curl -LO -k https://raw.githubusercontent.com/dibsonthis/vortex-dist/main/win/update.bat
-update.bat
+./update.bat
 ```
 
 To view and compile Vortex source code, including the source code for the provided modules, [visit the official repository](https://github.com/dibsonthis/vortex).
