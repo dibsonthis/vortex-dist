@@ -1,0 +1,22 @@
+import [obj_map] : functional
+
+type Reactive = (props) => {
+    return props.obj_map((k, v, i, state) => {
+        if (v.type() != List) {
+            return v
+        }
+
+        if (v.length() == 0) {
+            return None
+        }
+        
+        if (v.length() == 1) {
+            return v[0]
+        }
+
+        const value = v[0]
+        const hook = v[1]
+        value::onChange((data) => hook(data, state))
+        return value
+    })
+}
